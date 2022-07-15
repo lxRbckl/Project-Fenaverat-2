@@ -14,7 +14,7 @@ from dash_bootstrap_components import themes
 # global <
 gPath = path.realpath(__file__)
 gDirectory = '/'.join(gPath.split('/')[:-2])
-githubToken = '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'
+githubToken = ''
 application = Dash(
 
     server = True,
