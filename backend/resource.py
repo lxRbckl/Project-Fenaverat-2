@@ -14,7 +14,7 @@ from dash_bootstrap_components import themes
 # global <
 gPath = path.realpath(__file__)
 gDirectory = '/'.join(gPath.split('/')[:-2])
-githubToken = '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'
+githubToken = ''
 application = Dash(
 
     server = True,
@@ -24,7 +24,15 @@ application = Dash(
 )
 gBootLink = {
 
+    'aboutMeData' : '',
+    'myProjectData' : '',
+    'myServerData' : '',
 
+    'feedData' : 'https://raw.githubusercontent.com/lxRbckl/Project-Fenaverat-2/master/backend/data/feed.json',
+    'bodyData' : 'https://raw.githubusercontent.com/lxRbckl/Project-Fenaverat-2/master/backend/data/body.json',
+    'boardData' : 'https://raw.githubusercontent.com/lxRbckl/Project-Fenaverat-2/master/backend/data/board.json',
+    'bodyStyle' : 'https://raw.githubusercontent.com/lxRbckl/Project-Fenaverat-2/master/frontend/style/body.json',
+    'templateStyle' : 'https://raw.githubusercontent.com/lxRbckl/Project-Fenaverat-2/master/frontend/style/template.json'
 
 }
 
@@ -71,6 +79,6 @@ def getData(pGithub = Github(githubToken)):
 
             }
 
-        for r in [pGithub.get_user(u).get_repos() for u in get['myProjectData']['user']]}
+        for r in [pGithub.get_user(u).get_repos() for u in get(gBootLink['']).json()['']]}
 
     }
