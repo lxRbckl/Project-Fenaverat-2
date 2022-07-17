@@ -1,3 +1,45 @@
 {
+  "aliases" : [
+    "set",
+    "Set",
+    "SET",
+    "get",
+    "Get",
+    "GET",
+    "update",
+    "Update",
+    "UPDATE",
+    "delete",
+    "Delete",
+    "DELETE"
+  ],
+  "user" : {
+    "add" : [
 
+    ]
+  },
+  "language" : {
+    "add" : [
+
+    ],
+    "remove" : [
+
+    ]
+  },
+  "package" : {
+    "add" : [
+
+    ],
+    "remove" : [
+
+    ]
+  },
+  "project" : {
+    "add" : [
+
+    ],
+    "remove" : [
+
+    ]
+  }
 }
