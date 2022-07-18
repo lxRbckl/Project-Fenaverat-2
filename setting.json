@@ -17,20 +17,15 @@
       "DELETE"
    ],
    "user": {
-      "add": [
-
-      ]
+      "add": []
    },
    "language": {
       "add": [],
       "remove": []
    },
    "topic": {
-      "add": [
-
-      ],
-      "remove": [
-      ]
+      "add": [],
+      "remove": []
    },
    "project": {
       "remove": []
