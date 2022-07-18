@@ -1,45 +1,38 @@
 {
-  "aliases" : [
-    "set",
-    "Set",
-    "SET",
-    "get",
-    "Get",
-    "GET",
-    "update",
-    "Update",
-    "UPDATE",
-    "delete",
-    "Delete",
-    "DELETE"
-  ],
-  "user" : {
-    "add" : [
+   "aliases": [
+      "set",
+      "Set",
+      "SET",
+      "get",
+      "Get",
+      "GET",
+      "update",
+      "Update",
+      "UPDATE",
+      "del",
+      "Del",
+      "DEL",
+      "delete",
+      "Delete",
+      "DELETE"
+   ],
+   "user": {
+      "add": [
 
-    ]
-  },
-  "language" : {
-    "add" : [
+      ]
+   },
+   "language": {
+      "add": [],
+      "remove": []
+   },
+   "topic": {
+      "add": [
 
-    ],
-    "remove" : [
-
-    ]
-  },
-  "package" : {
-    "add" : [
-
-    ],
-    "remove" : [
-
-    ]
-  },
-  "project" : {
-    "add" : [
-
-    ],
-    "remove" : [
-
-    ]
-  }
+      ],
+      "remove": [
+      ]
+   },
+   "project": {
+      "remove": []
+   }
 }
