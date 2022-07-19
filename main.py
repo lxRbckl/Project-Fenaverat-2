@@ -48,13 +48,15 @@ async def setFunction(ctx, pKey: str, pAction: str, pValue: str, pData: dict):
 async def getFunction(ctx, pKey: str, pValue: str, pAction: str, pData: dict):
     '''  '''
 
+    # if (return requested content) <
+    if (pAction): r = [f'`{i}`' for i in pData[pKey][pAction].keys()]
+    elif (pKey): r = [f'`{i}`' for i in pData[pKey].keys()]
+    else: r = [f'`{i}`' for i in pData.keys()]
+
+    # >
+
+    await ctx.channel.send(delete_after = 120, content = '\n'.join(r))
     await ctx.message.delete()
-    await ctx.channel.send(
-
-        delete_after = 120,
-        content = '\n'.join(f'`{i}`' for i in pData[pKey][pAction])
-
-    )
 
 
 async def delFunction(ctx, pKey: str, pValue: str, pAction: str, pData: dict):
