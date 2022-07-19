@@ -49,14 +49,14 @@ async def getFunction(ctx, pKey: str, pValue: str, pAction: str, pData: dict):
     '''  '''
 
     # if (return requested content) <
-    if (pAction): r = [f'`{i}`' for i in pData[pKey][pAction].keys()]
+    if (pAction): r = [f'`{i}`' for i in pData[pKey][pAction]]
     elif (pKey): r = [f'`{i}`' for i in pData[pKey].keys()]
     else: r = [f'`{i}`' for i in pData.keys()]
 
     # >
 
-    await ctx.channel.send(delete_after = 120, content = '\n'.join(r))
     await ctx.message.delete()
+    await ctx.channel.send(delete_after = 60, content = '\n'.join(r))
 
 
 async def delFunction(ctx, pKey: str, pValue: str, pAction: str, pData: dict):
@@ -132,7 +132,7 @@ async def on_ready(pGithub = Github(githubToken)):
 
 @commands.has_permissions(administrator = True)
 @fenaverat.command(aliases = jsonLoad(pFile = f'{gDirectory}/setting.json')['aliases'])
-async def commandFunction(ctx, pKey: str, pAction: str, pValue: str = None):
+async def commandFunction(ctx, pKey: str = None, pAction: str = None, pValue: str = None):
     '''  '''
 
     # local <
@@ -143,7 +143,7 @@ async def commandFunction(ctx, pKey: str, pAction: str, pValue: str = None):
     # >
 
     # if ((existing key) and (existing action)) <
-    if (isKey and isAction):
+    if ((isKey and isAction) or (ctx.invoked_with.lower() == 'get')):
 
         # call function <
         await {
